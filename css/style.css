@@ -1,0 +1,471 @@
+/* ----------------------------------------------------------------------------- GENERELL */
+/* Generella element för hela sidan  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body{
+    background-image: url("/images/library/background.png");
+    background-color: rgb(70, 26, 143); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center, center;
+
+    padding: 0px;
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+} 
+html, body{
+    height: 75%;
+}
+/* InQuizIt header */
+#header{
+    text-align: center;
+    color: rgb(255, 255, 255);
+
+    font-variant: small-caps;
+    font-size: 30px;
+
+    cursor: default;
+}
+/* Behållare för alla fönster */
+#container{
+    height: 850px;
+    width: 100%;
+}
+/* ----------------------------------------------------------------------------- INDEX */
+/* Element för index sidan */
+
+/* Behållare för startrutan */
+#index-container{   
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 250px;
+    padding: 16.35%;
+    
+    cursor: default;
+
+    text-align: center;
+}
+/* Vita Boxen */
+#index-content{
+    background-color: rgb(255, 255, 255);
+    width: 320px;
+    height: 138px;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 4px;
+}
+/* Inmatning av username */
+input{
+    color: rgb(32, 32, 32);
+}
+#index-input-username{
+    width: 280px;
+    height: 42px;
+
+    margin: 16px auto 0px auto;
+    
+    border-radius: 4px;
+    border: solid 2.49px rgb(204, 204, 204); 
+    
+    color: rgb(32, 32, 32);
+    font-weight: 700;
+    font-size: 18px; 
+    text-align: center;
+}
+#index-input-username:focus{
+    border-color: rgb(32, 32, 32);
+}
+#index-input-username:focus:not(:hover){
+    border: solid 1.85px rgb(32, 32, 32);
+    outline: solid 2px rgb(32, 32, 32);
+    outline-offset: -4px;
+    padding: 1.75px;
+    line-height: 30px;
+}
+::placeholder{
+    color: rgb(178, 178, 178);
+    font-weight: 700;
+    font-size: 18px;
+}
+/* Enter-knapp */
+#index-enter-button{
+    background-color: rgb(48, 48, 48);
+    width: 288px;
+    height: 48px;
+    margin: 10px auto 15px auto;
+    
+    border: solid 4px;
+    border-color:rgb(48, 48, 48) rgb(48, 48, 48) rgb(32, 32, 32) rgb(48, 48, 48);
+    border-radius: 4px;
+
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+}
+#index-enter-button:hover{
+    background-color: rgb(45, 45, 45);
+    height: 46px;
+    margin: 12px auto 15px auto;
+
+    border-color:rgb(45, 45, 45) rgb(45, 45, 45) rgb(32, 32, 32) rgb(45, 45, 45);
+    border-bottom-width: 2.5px;
+
+    cursor: pointer;
+}
+/* ----------------------------------------------------------------------------- MENY */
+/* Element för meny */
+#content{
+    background-color: rgb(242, 242, 242);
+    width: 1200px;
+    height: 700px;
+    margin: auto;
+
+    position: relative;
+
+    border: 4px solid rgb(32, 32, 32);
+    border-radius: 10px;
+}
+#content-header{
+    background-color: rgb(32, 32, 32);
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px;
+
+    cursor: default;
+}
+#content-grid{
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    width: 1150px;
+    height: 600px;
+    margin: auto;
+    padding: 25px;
+}
+.quiz-tile-title{
+    color: rgb(32, 32, 32);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: -35px;
+}
+.quiz-tile{
+    width: 325px;
+    height: 100px;
+    float: left;
+    margin: 25px;
+
+    background-size: cover;
+
+    cursor: pointer;
+
+    border: 3px solid rgb(32, 32, 32);
+    border-radius: 10px;
+}
+.quiz-tile:hover > .quiz-tile-title {
+    font-size: 24.4px;
+    color: rgba(51, 49, 51, 0.897);
+}
+/* ----------------------------------------------------------------------------- GAME */
+/* Element för att spela quiz */
+#game-content{
+    background: rgb(242, 242, 242);
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    display: none;
+
+    width: 1150px;
+    height: 600px;
+    margin: auto;
+    padding: 25px;
+}
+/* Räknare */
+#game-counter{
+    background-color: rgb(133, 80, 188); 
+    width: 125px;
+    height: 125px;
+    position: absolute;
+
+    display: none;
+
+    color: white;
+    font: 500 65px Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 130px;
+    text-align: center;
+        
+    border-radius: 100px;
+
+    cursor: default;
+}
+/* Bildruta  */
+#game-image{ 
+    width: 700px;
+    height: 400px;
+    margin: -12.5px auto auto auto;
+
+    background-repeat: no-repeat;
+    background-size: 700px 400px;
+
+    border: 3px groove;
+    border-color: rgba(32, 32, 32, 0.225);
+    border-bottom-color: rgba(32, 32, 32, 0.9);
+    border-radius: 1.75px;
+}
+/* Grid för svarsalternativ */
+#game-alternatives-grid{
+    width: 1200px;
+    height: 220px;
+    margin: 10px auto auto -22.5px;
+    position: relative;
+  
+    display: none;
+    
+    grid-template-columns: 597.5px 597.5px;
+    grid-row: auto;
+}
+/* Alternativ */
+.game-alternative{
+    margin: 1.5px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    
+    border: 2px groove;
+    border-color: rgba(0, 0, 0, 0.025) rgba(0, 0, 0, 0.025) rgba(0, 0, 0, 0.192) rgba(0, 0, 0, 0.025);
+
+    cursor: pointer;
+}
+.game-alternative:hover{
+    border-width: 3px;
+    margin: 0.5px;
+    border-color: rgba(0, 0, 0, 0.025) rgba(0, 0, 0, 0.025) rgba(0, 0, 0, 0.336) rgba(0, 0, 0, 0.025);
+}
+#alt-1{
+    background: rgb(223, 32, 65);
+}
+#alt-2{
+    background: rgb(215, 157, 35);
+}
+#alt-3{
+    background: rgb(43, 136, 27);
+}
+#alt-4{
+    background: rgb(28, 107, 203);
+}
+/* Play button (starts quiz)  */
+#game-play-button{
+    background-color: rgb(48, 48, 48);
+    width: 288px;
+    height: 48px;
+
+    position: absolute;
+    bottom: 25%;
+    left: 37.5%;
+
+    border: 4px solid;
+    border-color:rgb(48, 48, 48) rgb(48, 48, 48) rgb(32, 32, 32) rgb(48, 48, 48);
+    border-radius: 4px;
+
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+}
+#game-play-button:hover{
+    background-color: rgb(45, 45, 45);
+    height: 46px;
+    margin-top: 2px;
+
+    border-color:rgb(45, 45, 45) rgb(45, 45, 45) rgb(32, 32, 32) rgb(45, 45, 45);
+    border-bottom-width: 2.5px;
+
+    cursor: pointer;
+}
+/* ----------------------------------------------------------------------------- RESULTS */
+/* Element för att se resultat */
+#result-content{
+    background-color: rgb(242, 242, 242);
+    background-image: url("/images/library/result-background.png");
+    background-repeat: no-repeat;
+    background-size: 1200px 700px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    display: none;
+
+    width: 1150px;
+    height: 600px;
+    margin: auto;
+    padding: 25px;
+
+    cursor: default;
+}
+#result-box{
+    position: relative;
+    background: lightgray; 
+    
+    margin: 25px auto auto auto;
+    width: 600px;
+    height: 500px;
+    padding: 25px;
+
+    border: 1px solid rgb(32, 32, 32);
+    border-radius: 5px;
+}
+#result-text{
+    text-align: center;
+    color: rgb(45, 45, 45);
+    font-size: 26px;
+    /* background:green; */
+
+    margin-top: 2.5%;
+    line-height: 30px;
+}
+#result-bar{ 
+    background: rgb(121, 73, 185); 
+
+    margin: 35px auto 25px auto;
+    width: 400px;
+    height: 36px;
+
+    border: 1px solid rgb(32, 32, 32);
+    border-radius: 15px;
+}
+#bar{
+    background: rgb(101, 27, 124); 
+
+    display: block;
+    
+    width: 5%;
+    height: 100%;
+    border-radius: inherit;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#result-bar:hover{
+
+    height: 32.5px;
+    border: 2.5px solid rgb(32, 32, 32);
+}
+#result-image{
+    width: 500px;
+    height: 275px;
+    margin: auto;
+
+    background-repeat: no-repeat;
+    background-size: 800px 400px;
+}
+#result-menu-button{
+    background-color: rgb(48, 48, 48);
+    width: 400px;
+    height: 50px;
+
+    position: absolute;
+    bottom: 6%;
+    left: 125px;
+
+    border: 4px solid;
+    border-color:rgb(48, 48, 48) rgb(48, 48, 48) rgb(32, 32, 32) rgb(48, 48, 48);
+    border-radius: 4px;
+
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+}
+#result-menu-button:hover{
+    background-color: rgb(45, 45, 45);
+    height: 48px;
+    margin-top: 2px;
+
+    border-color:rgb(45, 45, 45) rgb(45, 45, 45) rgb(32, 32, 32) rgb(45, 45, 45);
+    border-bottom-width: 2.5px;
+
+    cursor: pointer;
+}
+/* ----------------------------------------------------------------------------- FOOTER */
+/* Element längst ner på sidan */
+#footer{ 
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    margin-bottom: 10.275px;
+    padding: 0;
+    bottom: 0;
+    
+    color:rgb(255, 255, 255);
+    line-height: 10.75px;
+    text-align: center;
+
+    border-radius: 1.6px;
+
+    cursor: default;
+}
+/* ----------------------------------------------------------------------------- SLIDER */
+/* Slider stuff */
+.slider{
+    height: 50px;
+    width: 100%;
+    overflow-y: hidden;
+    max-height: 50px;
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1); 
+}
+.slider.closed{
+    max-height: 0;
+    width: 100%;
+}
+.slider2{
+    background: rgb(226, 27, 60);
+    height: 50px;
+    width: 100%;
+    margin-top: 10px;
+}
+.slider, p {
+    font-size: 14px; 
+}
+.slider2, img{
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+}
+h3{
+    font-size: 22px;
+}
+h4{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    margin: 20px auto auto 20px;
+}
+/* ----------------------------------------------------------------------------- LÄNKAR */
+/* Element för länkar  */
+a{
+    color: inherit;
+    font-size: 12.75px;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+/* ----------------------------------------------------------------------------- */

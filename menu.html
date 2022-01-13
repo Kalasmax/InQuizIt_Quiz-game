@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Play InQuizIt!</title>
+
+        <link rel="shortcut icon" href="images/icons/icon.ico"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <script src="js/classes/User.js" defer></script>
+        <script src="js/classes/Game.js" defer></script>
+
+        <script src="js/classes/quiz/Quiz.js" defer></script>
+        <script src="js/classes/quiz/QuizContent.js" defer></script>
+        <script src="js/classes/quiz/QuizAlternative.js" defer></script>
+
+        <script src="js/services/app/QuizLibrary.js" defer></script>
+        <script src="js/services/app/GameEngine.js" defer></script>
+        <script src="js/services/utilities.js" defer></script>
+        
+        <script src="js/services/LogInHandler.js"></script>
+
+    </head>
+    <body>
+
+        <div id="container">
+
+            <div id="header">
+                <h1>InQuizIt!</h1>
+            </div>
+
+            <div id="content">
+
+                <div id="content-header"></div>
+
+                <div id="content-grid"></div>
+                
+                <div id="game-content">
+
+                    <div id="game-counter">10</div>
+
+                    <div id="game-image"></div>
+
+                    <button id="game-play-button">Play</button>
+
+                    <div id="game-alternatives-grid">
+
+                        <div id="alt-1" class="game-alternative" data-correct="">
+                            <img src="images/icons/triangle.png">
+                            <h3 class="game-alternative-text"></h3>
+                        </div> 
+
+                        <div id="alt-2" class="game-alternative" data-correct="">
+                            <img src="images/icons/circle.png">
+                            <h3 class="game-alternative-text"></h3>
+                        </div> 
+
+                        <div id="alt-3" class="game-alternative" data-correct="">
+                            <img src="images/icons/square.png">
+                            <h3 class="game-alternative-text"></h3>
+                        </div>
+
+                        <div id="alt-4" class="game-alternative" data-correct="">
+                            <img src="images/icons/diamond.png">
+                            <h3 class="game-alternative-text"></h3>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <div id="result-content"> 
+
+                    <div id="result-box">
+
+                        <div id="result-header">
+                            <h3 id="result-text">You got % of the questions right!</h3>
+                        </div>
+
+                        <div id="result-bar">
+                            <div id="bar"></div>
+                        </div>
+
+                        <div id="result-image">
+                            <img src="images/library/complete.png">
+                        </div>
+
+                        <button id="result-menu-button">Return to menu</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+        <div id="footer">
+            <p>Copyright &copy; 2021 <strong>InQuizIt</strong></p> 
+            <a href="https://www.termsandconditionsgenerator.com/">Terms</a> |<a href="https://www.termsfeed.com/privacy-policy-generator/"> Privacy</a>
+        </div>
+
+    </body>
+</html>
